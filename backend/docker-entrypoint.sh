@@ -1,10 +1,11 @@
 #!/bin/sh
 
-echo "waiting for mongoDB to start..."
+echo "Waiting for MongoDB to Start..."
 ./wait-for db:27017
 
-echo "Starting DB migration..."
-mpm run db:up
 
-echo "starting the server ..."
-npm start 
+echo "Starting DB migration..."
+npm run db:up
+
+echo "Starting the server..."
+npm start
